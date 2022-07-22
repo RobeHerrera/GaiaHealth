@@ -5,10 +5,10 @@ Team of AiLabSchool
 https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data
 
 # How to use:
-1- Please download the extension of LiveServer.
-2- Open index.html
-3- On the bottom right corner activate the Local Server.
-4- Every time that you save the project the web page will get update.
+1. Please download the extension of LiveServer.
+2. Open index.html
+3. On the bottom right corner activate the Local Server.
+4. Every time that you save the project the web page will get update.
 
 
 # Team:
