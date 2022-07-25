@@ -4,19 +4,20 @@ Team of AiLabSchool
 #  Using kaggle for Breast Cancer
 https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data
 
-# How to se with Flask (integrating Python code) 
-# tested only in windows
+# How to se with Flask (integrating Python code) - tested only in windows
 1- Install python (I have used 3.10):
 
 2- Create a virtual enviroment using env as a virtualization tool, and name it as "ai_env":
 `python -m venv ai_env`
 
 3- Activate it:
+
 cmd `C:\Users\<USER>\ai_env\Scripts\activate.bat`
 or 
 PS `C:\Users\<USER>\ai_env\Scripts\Activate.ps1`
 
 4- Navigate to your project folder with you environment activated and install the requirements.txt:
+
 `python -m pip install -r requirements.txt`
 or simply:
 `pip install -r requirements.txt`
