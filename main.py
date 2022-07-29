@@ -9,7 +9,13 @@ def index():
     return render_template('index.html')
 
 @app.route('/post', methods=['POST'])
-def post():
+def ai_model():
+    if request.method == "POST":
+        # getting input with name = fname in HTML form
+        first_name = request.form.get("name")
+        # getting input with name = lname in HTML form
+        email = request.form.get("email")
+        return "Your name is "+ first_name + " " + email
     return "recived: {}".format(request.form)
 
 
@@ -23,6 +29,7 @@ def fahrenheit_from(celsius):
         return str(fahrenheit)
     except ValueError:
         return "invalid input"
+
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8080, debug=True)
