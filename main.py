@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import request
 from flask import render_template
+from model import breast_model as model
 
 app = Flask(__name__, template_folder='./templates')
 
@@ -32,4 +33,5 @@ def fahrenheit_from(celsius):
 
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=8080, debug=True)
+    # app.run(host="127.0.0.1", port=8080, debug=True)
+    model.run()
