@@ -211,33 +211,150 @@
         </div>
 
         <!-- Pretty form -->
-        <form action="{{ url_for('ai_model')}}" method="post" role="form" class="php-email-form">
+        <form action="{{ url_for('ai_model')}}" method="post" class="php-email-form">
           
           <div class="row">
-            <div class="col-md-4 form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-              <div class="validate"></div>
+            <div class="col-sm-2">
+              <label for="radious_mean">Radious Mean</label>
+              <input type="text" class="form-control" name="radious_mean" id="radious_mean" placeholder="17.88"  value="17.88">
             </div>
-            <div class="col-md-4 form-group mt-3 mt-md-0">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
-              <div class="validate"></div>
+            <div class="col-sm-2">
+              <label for="texture_mean">Texture Mean</label>
+              <input type="text" class="form-control" name="texture_mean" id="texture_mean" placeholder="10.38"  value="10.38">
             </div>
-            <div class="col-md-4 form-group mt-3 mt-md-0">
-              <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-              <div class="validate"></div>
+            <div class="col-sm-2">
+              <label for="perimeter_mean">Perimeter Mean</label>
+              <input type="text" class="form-control" name="perimeter_mean" id="perimeter_mean" placeholder="122.8"  value="122.8">
+            </div>
+            <div class="col-sm-2">
+              <label for="area_mean">Area Mean</label>
+              <input type="text" class="form-control" name="area_mean" id="area_mean" placeholder="1001" value="1001">
+            </div>
+            <div class="col-sm-2">
+              <label for="smoothness_mean">Smoothness Mean</label>
+              <input type="text" class="form-control" name="smoothness_mean" id="smoothness_mean" placeholder="0.1184"  value="0.1184">
+            </div>
+            <div class="col-sm-2">
+              <label for="compactness_mean">Compactness Mean</label>
+              <input type="text" class="form-control" name="compactness_mean" id="compactness_mean" placeholder="0.2776"  value="0.2776">
             </div>
           </div>
+
           <div class="row">
-            <div class="col-md-4 form-group mt-3">
-              <input type="datetime" name="date" class="form-control datepicker" id="date" placeholder="diagnostic Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-              <div class="validate"></div>
+            <div class="col-sm-2">
+              <label for="concavity_mean">Concavity Mean</label>
+              <input type="text" class="form-control" name="concavity_mean" id="concavity_mean" placeholder="0.3001" value="0.3001">
             </div>
+            <div class="col-sm-2">
+              <label for="concave_points_mean">Concave Points Mean</label>
+              <input type="text" class="form-control" name="concave_points_mean" id="concave_points_mean" placeholder="0.1471" value="0.1471">
+            </div>
+            <div class="col-sm-2">
+              <label for="symmetry_mean">Symmetry Mean</label>
+              <input type="text" class="form-control" name="symmetry_mean" id="symmetry_mean" placeholder="0.2419" value="0.2419">
+            </div>
+            <div class="col-sm-2">
+              <label for="fractal_dimension_mean">Fractal Dimension Mean</label>
+              <input type="text" class="form-control" name="fractal_dimension_mean" id="fractal_dimension_mean" placeholder="0.07871" value="0.07871">
+            </div>
+            <div class="col-sm-2">
+              <label for="radius_se">Radius Se</label>
+              <input type="text" class="form-control" name="radius_se" id="radius_se" placeholder="1.095" value="1.095">
+            </div>
+            <div class="col-sm-2">
+              <label for="texture_se">Texture Se</label>
+              <input type="text" class="form-control" name="texture_se" id="texture_se" placeholder="0.9053" value="0.9053">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-2">
+              <label for="perimeter_se">Perimeter Se</label>
+              <input type="text" class="form-control" name="perimeter_se" id="perimeter_se" placeholder="8.589" value="8.589">
+            </div>
+            <div class="col-sm-2">
+              <label for="area_se">Area Se</label>
+              <input type="text" class="form-control" name="area_se" id="area_se" placeholder="153.4" value="153.4">
+            </div>
+            <div class="col-sm-2">
+              <label for="smoothness_se">Smoothness Se</label>
+              <input type="text" class="form-control" name="smoothness_se" id="smoothness_se" placeholder="0.006399" value="0.006399">
+            </div>
+            <div class="col-sm-2">
+              <label for="compactness_se">Compactness Se</label>
+              <input type="text" class="form-control" name="compactness_se" id="compactness_se" placeholder="0.04904" value="0.04904">
+            </div>
+            <div class="col-sm-2">
+              <label for="concavity_se">Concavity Se</label>
+              <input type="text" class="form-control" name="concavity_se" id="concavity_se" placeholder="0.05373" value="0.05373">
+            </div>
+            <div class="col-sm-2">
+              <label for="concave_points_se">Concave Points Se</label>
+              <input type="text" class="form-control" name="concave_points_se" id="concave_points_se" placeholder="0.01587" value="0.01587">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-2">
+              <label for="symmetry_se">Symmetry Se</label>
+              <input type="text" class="form-control" name="symmetry_se" id="symmetry_se" placeholder="0.03003" value="0.03003">
+            </div>
+            <div class="col-sm-2">
+              <label for="fractal_dimension_se">Fractal Dimension Se</label>
+              <input type="text" class="form-control" name="fractal_dimension_se" id="fractal_dimension_se" placeholder="0.006193" value="0.006193">
+            </div>
+            <div class="col-sm-2">
+              <label for="radius_worst">Radius Worst</label>
+              <input type="text" class="form-control" name="radius_worst" id="radius_worst" placeholder="25.38" value="25.38">
+            </div>
+            <div class="col-sm-2">
+              <label for="texture_worst">Texture Worst</label>
+              <input type="text" class="form-control" name="texture_worst" id="texture_worst" placeholder="17.33" value="17.33">
+            </div>
+            <div class="col-sm-2">
+              <label for="perimeter_worst">Permimeter Worst</label>
+              <input type="text" class="form-control" name="perimeter_worst" id="perimeter_worst" placeholder="184.6" value="184.6">
+            </div>
+            <div class="col-sm-2">
+              <label for="area_worst">Area Worst</label>
+              <input type="text" class="form-control" name="area_worst" id="area_worst" placeholder="2019"value="2019">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-2">
+              <label for="smoothness_worst">Smoothness Worst</label>
+              <input type="text" class="form-control" name="smoothness_worst" id="smoothness_worst" placeholder="0.1622" value="0.1622">
+            </div>
+            <div class="col-sm-2">
+              <label for="compactness_worst">Compactness Worst</label>
+              <input type="text" class="form-control" name="compactness_worst" id="compactness_worst" placeholder="0.6656" value="0.6656">
+            </div>
+            <div class="col-sm-2">
+              <label for="concavity_worst">Concavity Worst</label>
+              <input type="text" class="form-control" name="concavity_worst" id="concavity_worst" placeholder="0.7119" value="0.7119">
+            </div>
+            <div class="col-sm-2">
+              <label for="concave_points_worst">Concave Point Worst</label>
+              <input type="text" class="form-control" name="concave_points_worst" id="concave_points_worst" placeholder="0.2654" value="0.2654">
+            </div>
+            <div class="col-sm-2">
+              <label for="symmetry_worst">Symmetry Worst</label>
+              <input type="text" class="form-control" name="symmetry_worst" id="symmetry_worst" placeholder="0.4601" value="0.4601">
+            </div>
+            <div class="col-sm-2">
+              <label for="fractal_dimension_worst">Fractal Dimension Worst</label>
+              <input type="text" class="form-control" name="fractal_dimension_worst" id="fractal_dimension_worst" placeholder="0.1189" value="0.1189">
+            </div>
+          </div>
+          <!------------------------------->
+          <div class="row">
             <div class="col-md-4 form-group mt-3">
               <select name="department" id="department" class="form-select">
                 <option value="">Select Department</option>
-                <option value="Department 1">Department 1</option>
-                <option value="Department 2">Department 2</option>
-                <option value="Department 3">Department 3</option>
+                <option value="Study 1">Study 1</option>
+                <option value="Study 2">Study 2</option>
+                <option value="Study 3">Study 3</option>
               </select>
               <div class="validate"></div>
             </div>
@@ -264,103 +381,6 @@
           <div class="text-center"><button type="submit">Get Diagnostic </button></div>
         </form>
         <!-- ======= Form to send to model  ======= -->
-        <!-- <form action="/">
-          <div class="banner">
-            <h1>Family Medicine Practice</h1>
-          </div>
-          <br/>
-          <fieldset>
-            <legend>Patient Information</legend>
-            <div class="item">
-              <label for="fname"> First Name<span>*</span></label>
-              <input id="fname" type="text" name="fname" required/>
-            </div>
-            <div class="item">
-              <label for="lname"> Last Name<span>*</span></label>
-              <input id="lname" type="text" name="lname" required/>
-            </div>
-            <div class="item">
-              <label for="initial">Middle Initial<span>*</span></label>
-              <input id="initial" type="text" name="initial" required/>
-            </div>
-            <div class="item">
-              <label for="phone">Daytime Phone<span>*</span></label>
-              <input id="phone" type="number"   name="phone" required/>
-            </div>
-            <div class="item">
-              <label for="phone">Evening Phone<span>*</span></label>
-              <input id="phone" type="number"   name="phone" required/>
-            </div>
-            <div class="item">
-              <label for="bdate">Birth Date <span>*</span></label>
-              <input id="bdate" type="date" name="bdate" required/>
-              <i class="fas fa-calendar-alt"></i>
-            </div>
-            <div class="question">
-              <label>Is this your first visit to our offices?</label>
-              <div class="question-answer">
-                <div>
-                  <input type="radio" value="none" id="radio_1" name="visit"/>
-                  <label for="radio_1" class="radio"><span>Yes</span></label>
-                </div>
-                <div>
-                  <input  type="radio" value="none" id="radio_2" name="visit"/>
-                  <label for="radio_2" class="radio"><span>No</span></label>
-                </div>
-              </div>
-            </div>
-          </fieldset>
-          <br/>
-          <fieldset>
-            <legend>Appointment Information</legend>
-            <div class="item">
-              <label for="date">Date<span>*</span></label>
-              <input id="date" type="date" name="date" required/>
-              <i class="fas fa-calendar-alt"></i>
-            </div>
-            <div class="item">
-              <p>Time</p>
-              <select>
-                <option selected value="" disabled selected></option>
-                <option value="m" >Morning</option>
-                <option value="a">Afternoon</option>
-                <option value="e">Evening</option>
-              </select>
-            </div>
-            <div class="question">
-              <label>Preferred Physician</label>
-              <div class="question-answer">
-                <div>
-                  <input type="radio" value="none" id="radio_1" name="physician"/>
-                  <label for="radio_1" class="radio"><span>Dr. Anderson</span></label>
-                </div>
-                <div>
-                  <input  type="radio" value="none" id="radio_3" name="physician"/>
-                  <label for="radio_3" class="radio"><span>Dr. Patel</span></label>
-                </div>
-                <div>
-                  <input  type="radio" value="none" id="radio_4" name="physician"/>
-                  <label for="radio_4" class="radio"><span>No preference</span></label>
-                </div>
-                <div>
-                  <input  type="radio" value="none" id="radio_5" name="physician"/>
-                  <label for="radio_5" class="radio"><span>Dr. Jones</span></label>
-                </div>
-                <div>
-                  <input  type="radio" value="none" id="radio_6" name="physician"/>
-                  <label for="radio_6" class="radio"><span>Dr. Smith</span></label>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <label for="instructions">Please describe the reason for this visit </label>
-              <textarea id="instructions" rows="3"></textarea>
-            </div>
-          </fieldset>
-          <div class="btn-block">
-            <button type="submit" href="/">Submit</button>
-          </div>
-        </form> -->
 
       </div>
     </section><!-- End diagnostic Section -->
@@ -768,7 +788,7 @@
   <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="../static/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="../static/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="../static/vendor/php-email-form/validate.js"></script>
+<!--  <script src="../static/vendor/php-email-form/validate.js"></script>-->
 
   <!-- Template Main JS File -->
   <script src="../static/js/main.js"></script>
